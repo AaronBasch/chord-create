@@ -111,19 +111,20 @@ export function progressionLogic(index, indeces) {
       if (newIndex === prevIndex)
         newIndex = options[getRandomInt(options.length - 1)];
       break;
-    case "VIDOM":
-      options = ["IIMIN", "IIDOM"];
+    case "VI DOM":
+      options = ["II MIN", "II DOM"];
       newIndex = options[getRandomInt(options.length - 1)];
       if (newIndex === prevIndex)
         newIndex = options[getRandomInt(options.length - 1)];
       break;
-    case "VIIDIM":
-      options = ["IMAJ", "VIMIN", "#VDIM"];
+    case "VII DIM":
+      options = ["I MAJ", "VI MIN", "#V DIM"];
       newIndex = options[getRandomInt(options.length - 1)];
       if (newIndex === prevIndex)
         newIndex = options[getRandomInt(options.length - 1)];
       break;
     default:
+      newIndex = index;
       break;
   }
   return newIndex;
