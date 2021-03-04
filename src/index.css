@@ -1,4 +1,4 @@
-.button-box {
+/* .button-box {
   margin-top: 2%;
   margin-left: 2%;
   float: center;
@@ -6,30 +6,30 @@
 
   /* 
   display: inline; */
-}
+/* }
 .center {
   text-align: center;
-}
+} */
 
 /* .slider-wrapper { */
 /* width: 50px;
   height: 20px; */
 /* } */
 
-.slider-wrapper input {
+/* .slider-wrapper input {
   width: 50px;
   height: 20px;
   /* margin: 0; */
-  /* transform-origin: 50px 0px;q */
-  /* transform: rotate(90deg); */
-}
+/* transform-origin: 50px 0px;q */
+/* transform: rotate(90deg); 
+} 
 
-.new-line {
+/* .new-line {
   display: block;
 }
 .button-box-2 {
   margin-left: 2%;
-  /* float: left; */
+  /* float: left; 
   padding: 2px;
   white-space: pre;
   display: inline;
@@ -37,7 +37,7 @@
 
 .button-box-2 {
   margin-left: 2%;
-  /* float: left; */
+  /* float: left; 
   padding: 2px;
   white-space: pre;
   display: inline;
@@ -45,7 +45,7 @@
 }
 .button-box-2:hover {
   margin-left: 2%;
-  /* float: left; */
+  /* float: left; 
   padding: 2px;
   white-space: pre;
   display: inline;
@@ -55,14 +55,14 @@
   margin-left: 1%;
   margin-top: 1%;
   display: block;
-}
+}  */
 
-.dropdown {
+.chordSelectButtons {
   /* list-style: none; */
   /* padding: 2px; */
 
   margin-left: 1%;
-  display: inline;
+  display: block;
   /* white-space: pre; */
 }
 /* .dropdown .nav-link {
@@ -74,10 +74,9 @@
   text-decoration: none;
 } */
 /* .dropdown .btn {
-  background: #b7ccdf;
-  color: #fff;
-}
-.dropdown .btn:hover {
+  margin-top: 2%;
+} */
+/* .dropdown .btn:hover {
   background: dfc1b7;
   color: #000;
 }

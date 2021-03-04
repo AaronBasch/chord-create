@@ -158,13 +158,16 @@ export const chordDictionary = {
 };
 export const extensionMap = {
   none: [],
-  "9": [14],
+  9: [14],
   b9: [13],
   "#9": [15],
-  "6": [9],
+  6: [9],
   b6: [8],
   sus: [5],
-  sus6: [5, 9]
+  sus6: [5, 9],
+  11: [16],
+  69: [9, 14],
+  911: [14, 16]
 };
 export const noteDegree = [
   "I",
