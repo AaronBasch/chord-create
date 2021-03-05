@@ -150,10 +150,11 @@ const progressionLogic = (curr, prev) => {
         newChord = options[getRandomInt(options.length - 1)];
       break;
     default:
-      newChord = curr;
+      newChord = prev;
       console.log("fail");
       break;
   }
+  console.log(newChord);
   return newChord;
 };
 
@@ -239,7 +240,6 @@ const chordToDegree = (chord, songKey) => {
   const noteIndex = notes.indexOf(chord[0]);
   const keyIndex = notes.indexOf(songKey);
   const numDifference = mod(noteIndex - keyIndex, 12);
-  console.log(numDifference);
   let chordDegree = "";
   switch (numDifference) {
     case 0:
@@ -341,8 +341,9 @@ const chordToDegree = (chord, songKey) => {
 };
 
 const PredictNextChord = (curr, prev, songKey) => {
-  let currDegree = chordToDegree(curr, songKey);
   let prevDegree = chordToDegree(prev, songKey);
+  let currDegree = chordToDegree(curr, songKey);
+
   let next = progressionLogic(currDegree, prevDegree);
   next = selectChordFromChoice(next, songKey);
   //
