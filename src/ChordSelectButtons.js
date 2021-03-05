@@ -61,11 +61,17 @@ const ChordSelectButtons = () => {
   // useEffect -> when chord list is updated, update screen's list of chords & give suggestions for next chord
   useEffect(() => {
     //take current chord
-    // nextChord = PredictNextChord(currentChord, prevChord, key, spice);
-    setRoot(nextChord[0]);
-    setType(nextChord[1]);
-    setExt(nextChord[2]);
-  }, [nextChord]);
+    let nextPredictedChord = PredictNextChord(
+      currentChord,
+      prevChord,
+      key,
+      spice
+    );
+    setRoot(nextPredictedChord[0]);
+    setType(nextPredictedChord[1]);
+    setExt(nextPredictedChord[2]);
+    setNextChord(nextPredictedChord);
+  }, [chordList]);
 
   const removeChord = () => {
     let newChordList = chordList.filter((chord) => chord.id !== currentID);
@@ -85,7 +91,7 @@ const ChordSelectButtons = () => {
       newList
       // chordList.concat({ id: id, chord: currentChord, prev: prevChord })
     );
-    setNextChord(PredictNextChord(currentChord, prevChord, key, spice));
+
     setCurrentID(currentID + 1);
     // resetParameters(); //set button parameters based on algorithm
   };
@@ -95,11 +101,12 @@ const ChordSelectButtons = () => {
     setCurrentChord(element.chord);
     setPrevChord(element.prev);
   };
-  useEffect(() => {
-    console.log("current chord: ", currentChord);
-  }, [currentID, currentChord, prevChord]);
+  // useEffect(() => {
+  //   console.log("current chord: ", currentChord);
+  // }, [currentID, currentChord, prevChord]);
 
   const chordToName = (chordAsArray) => {
+    chordAsArray[2] = chordAsArray[2] === "none" ? "" : chordAsArray[2];
     return chordAsArray[0] + " " + chordAsArray[1] + " " + chordAsArray[2];
   };
 
@@ -143,7 +150,7 @@ const ChordSelectButtons = () => {
           <DropdownList elements={extensions} setter={setExt} />
         </DropdownButton>
 
-        <>{console.log(chordList)}</>
+        {/* <>{console.log(chordList)}</> */}
         <Button>
           <FontAwesomeIcon icon={faPlus} onClick={() => addChord()} />
         </Button>
